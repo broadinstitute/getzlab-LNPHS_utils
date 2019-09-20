@@ -1,0 +1,13 @@
+function h = plot_vary_color(x,y,c,varargin)
+
+plotx = as_row(x);
+ploty = as_row(y);
+plotc = as_row(c);
+
+h = surface([plotx;plotx],[ploty;ploty],[zeros(size(plotx));zeros(size(plotx))],[plotc;plotc],...
+            'facecol','no',...
+            'edgecol','interp',...
+	    'linew',2,...
+	    varargin{:});
+
+
